@@ -1,36 +1,26 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png' 
 
-export default function Navbar() {
+const Navbar = () => {
 	return (
-		<nav className='bg-gray-900 text-white shadow-md'>
-			<div className='max-w-[1260px] mx-auto flex items-center justify-between px-8 py-4'>
-				{/* Logo Section */}
-				<div className='flex items-center gap-3'>
-					<img
-						src={logo}
-						alt='Logo'
-						className='w-10 h-10 object-contain'
-					/>
-				</div>
-
-				{/* Links Section */}
-				<div className='flex items-center gap-8'>
+		<nav className='fixed w-full bg-white bg-opacity-90 backdrop-blur-md shadow-md z-10'>
+			<div className='container mx-auto flex items-center justify-between py-4'>
+				<div className='text-xl font-bold text-orange-600'>Velvet Vibes Entertainment</div>
+				<div className='space-x-6 text-gray-800'>
 					<Link
 						to='/'
-						className='hover:text-blue-400 transition-colors'
+						className='hover:text-orange-500'
 					>
 						Home
 					</Link>
 					<Link
 						to='/events'
-						className='hover:text-blue-400 transition-colors'
+						className='hover:text-orange-500'
 					>
 						Events
 					</Link>
 					<Link
 						to='/entertainment'
-						className='hover:text-blue-400 transition-colors'
+						className='hover:text-orange-500'
 					>
 						Entertainment
 					</Link>
@@ -39,3 +29,5 @@ export default function Navbar() {
 		</nav>
 	)
 }
+
+export default Navbar

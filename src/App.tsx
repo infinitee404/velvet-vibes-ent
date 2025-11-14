@@ -4,24 +4,29 @@ import Home from './Pages/Home'
 import Events from './Pages/Events'
 import Entertainment from './Pages/Entertainment'
 
-export default function App() {
+function App() {
 	return (
 		<Router>
 			<Navbar />
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='/events'
-					element={<Events />}
-				/>
-				<Route
-					path='/entertainment'
-					element={<Entertainment />}
-				/>
-			</Routes>
+			<div className='pt-16'>
+				{/* Add top padding to avoid content hiding behind fixed navbar */}
+				<Routes>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+					<Route
+						path='/events'
+						element={<Events />}
+					/>
+					<Route
+						path='/entertainment'
+						element={<Entertainment />}
+					/>
+				</Routes>
+			</div>
 		</Router>
 	)
 }
+
+export default App
